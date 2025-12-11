@@ -57,6 +57,8 @@ registerfile.cpp / .h # Register file
 hex.cpp / .h # Hex loader
 main.cpp # Command-line interface
 
+yaml
+Copy code
 
 ---
 
@@ -68,20 +70,28 @@ Compile using g++:
 g++ -std=c++17 -Wall -Wextra -o rv32i \
     main.cpp cpu_single_hart.cpp rv32i_decode.cpp \
     rv32i_hart.cpp memory.cpp registerfile.cpp hex.cpp
-
 Or using your Makefile:
 
+bash
+Copy code
 make
-
 ▶ Running the Simulator
 Run a hex program:
+
+bash
+Copy code
 ./rv32i prog.hex
-Enable tracing:
+Enable instruction tracing:
+
+bash
+Copy code
 ./rv32i -t prog.hex
-Dump registers at the end:
+Dump registers after execution:
+
+bash
+Copy code
 ./rv32i -l prog.hex
 🧪 Example Test Files
-
 Common test programs include:
 
 add.hex
@@ -91,9 +101,11 @@ branch.hex
 memtest.hex
 
 Example usage:
+
+bash
+Copy code
 ./rv32i -t add.hex
 🎯 Purpose
-
 This project demonstrates:
 
 CPU architecture fundamentals
@@ -111,7 +123,6 @@ Systems programming in C++
 It serves as a foundation for understanding how real processors interpret and execute machine code.
 
 👤 Author
-
 Aasim Ghani
 Software Developer
-Systems Programming project in C++, related to the architecture branch of computer science
+Systems Programming • C++ • Computer Architecture
