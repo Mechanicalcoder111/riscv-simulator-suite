@@ -1,12 +1,7 @@
 /********************************************************************************************
-CSCI 463 – PE1 – RV32I Disassembler / Memory Simulator – Fall 2024
-
+RISC-V Simulator
 
 Programmer:  Aasim Ghani
-Section:     2
-TA:          James Alexander Stephans
-Date Due:    10/30/2024
-
 
 Purpose:
     Implements the 'memory' class, which simulates a byte-addressable memory array
@@ -18,10 +13,6 @@ Purpose:
       - Dump the entire memory contents in both hex and ASCII formats.
     This class is used by main() and rv32i_decode to fetch instructions and
     report warnings for out-of-range memory accesses.
-
-
-I certify that this is my own work, and where applicable an extension of the
-starter code for the assignment/exam.
 ********************************************************************************************/
 
 
