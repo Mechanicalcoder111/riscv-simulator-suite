@@ -13,7 +13,6 @@ Purpose:
         helper rendering functions and the hex formatting tools inherited from
         the 'hex' class.
 
-
     No printing is done directly in this file; instead, decode() returns a
     std::string that the caller (main/disassemble) prints.
 ********************************************************************************************/
