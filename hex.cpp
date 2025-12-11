@@ -1,5 +1,5 @@
 /********************************************************************************************
-RISC V Simulator
+RISC-V Simulator
 
 Programmer:  Aasim Ghani
 
