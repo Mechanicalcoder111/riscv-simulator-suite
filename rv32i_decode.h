@@ -1,16 +1,7 @@
 /********************************************************************************************
-CSCI 463 – PE1 – RV32I Disassembler / Memory Simulator – Fall 2024
-
-
-
+RV32I-Simulator
 
 Programmer:  Aasim Ghani
-Section:     2
-TA:          James Alexander Stephans
-Date Due:    10/30/2024
-
-
-
 
 Purpose:
     Declares the 'rv32i_decode' class, which performs static decoding of
@@ -21,12 +12,6 @@ Purpose:
       - Renders assembly mnemonics and operands into formatted strings.
     All methods are static; this class is never instantiated and does not
     perform any I/O itself.
-
-
-
-
-I certify that this is my own work, and where applicable an extension of the
-starter code for the assignment/exam.
 ********************************************************************************************/
 
 
