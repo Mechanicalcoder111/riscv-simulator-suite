@@ -1,30 +1,19 @@
 /********************************************************************************************
-CSCI 463 – Final Exam Version 3 – RISC-V Simulator – Fall 2025
-
+RISC-V Simulator
 
 Programmer:  Aasim Ghani
-Section:     2
-TA:          James Alexander Stephans
-Date Due:    10/30/2025
-
 
 Purpose:
     Declares the rv32i_hart class, which represents the execution unit (hart)
     of an RV32I CPU. This class:
-
-
+    
       - Owns the general-purpose register file.
       - Holds the program counter (pc) and status flags.
       - Fetches and executes instructions from the 'memory' object.
       - Provides tracing/dumping options controlled by flags.
 
-
     Instruction decoding is inherited from rv32i_decode; this class adds the
     dynamic execution behavior.
-
-
-I certify that this is my own work, and where applicable an extension of the
-starter code for the assignment/exam.
 ********************************************************************************************/
 
 
