@@ -1,22 +1,13 @@
 /********************************************************************************************
-CSCI 463 – PE1 – RV32I Disassembler / Memory Simulator – Fall 2024
-
+RISC-V Simulator
 
 Programmer:  Aasim Ghani
-Section:     2
-TA:          James Alexander Stephans
-Date Due:    10/30/2024
-
 
 Purpose:
     Declares the 'hex' utility class, which provides a collection of static helper
     functions for formatting 8-bit and 32-bit integer values as hexadecimal strings.
     These helpers centralize the formatting rules (width, leading zeros, and "0x"
     prefixes) so that all printed hex values in the program are consistent.
-
-
-I certify that this is my own work, and where applicable an extension of the
-starter code for the assignment/exam.
 ********************************************************************************************/
 
 
