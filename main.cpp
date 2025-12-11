@@ -1,16 +1,7 @@
 /********************************************************************************************
-CSCI 463 - Final Exam Version 3 - RISC-V Simulator - Fall 2025
-
-
-
+RISC-V Simulator
 
 Programmer:  Aasim Ghani
-Section:     2
-TA:          James Alexander Stephans
-Date Due:    10/30/2025
-
-
-
 
 Purpose:
     Main driver for the RV32I simulator.
@@ -25,12 +16,6 @@ Purpose:
       - Constructs a cpu_single_hart, configures its flags, and runs it
         with an optional instruction-count limit (-l).
       - Optionally dumps the final hart state and memory (-z).
-
-
-
-
-I certify that this is my own work, and where applicable an extension of the
-starter code for the assignment/exam.
 ********************************************************************************************/
 
 
