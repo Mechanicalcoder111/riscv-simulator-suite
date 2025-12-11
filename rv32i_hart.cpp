@@ -7,7 +7,6 @@ Purpose:
     Implements the rv32i_hart class, which simulates execution of RV32I
     instructions on a single hart. This file supports:
 
-
       - reset(): initialize pc, regs, counters, flags, and CSRs.
       - dump(): print the GP-registers and pc.
       - tick(): execute exactly one instruction (with optional tracing).
