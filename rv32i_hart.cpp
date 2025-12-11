@@ -1,12 +1,7 @@
 /********************************************************************************************
-CSCI 463 – Final Exam Version 3 – RISC-V Simulator – Fall 2025
-
+RISC-V Simulator
 
 Programmer:  Aasim Ghani
-Section:     2
-TA:          James Alexander Stephans
-Date Due:    10/30/2025
-
 
 Purpose:
     Implements the rv32i_hart class, which simulates execution of RV32I
@@ -23,10 +18,6 @@ Purpose:
            ALU-imm, ALU-reg,
            CSR ops, ECALL, EBREAK,
            and illegal instructions.
-
-
-I certify that this is my own work, and where applicable an extension of the
-starter code for the assignment/exam.
 ********************************************************************************************/
 
 
