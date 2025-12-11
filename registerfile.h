@@ -1,12 +1,7 @@
 /********************************************************************************************
-CSCI 463 – Final Exam Version 3 – RISC-V Simulator – Fall 2025
-
+RISC-V Simulator
 
 Programmer:  Aasim Ghani
-Section:     2
-TA:          James Alexander Stephans
-Date Due:    10/30/2025
-
 
 Purpose:
     Declares the 'registerfile' class, which stores the 32 general-purpose
