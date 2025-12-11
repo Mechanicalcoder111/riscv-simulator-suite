@@ -1,97 +1,102 @@
-# RISC-V Simulator Suite (RV32I)
+RISC-V Simulator Suite (RV32I)
 
 A complete RISC-V RV32I simulator written in modern C++, implementing:
 
-- **Memory module**
-- **Register file**
-- **Instruction decoder & disassembler**
-- **Single-hart CPU emulator**
-- **Instruction-accurate RV32I execution engine**
-- **Tracing, debugging output, and program loaders**
+Memory module
+
+Register file
+
+Instruction decoder & disassembler
+
+Single-hart CPU emulator
+
+Instruction-accurate RV32I execution engine
+
+Tracing, debugging output, and program loaders
 
 This project replicates the core behavior of a real RISC-V processor, executing binary programs one instruction at a time while maintaining correct architectural state.
 
----
+🔧 Features
+✔ RV32I Instruction Set Support
 
-## 🔧 Features
-
-### ✔ RV32I Instruction Set Support
 Implements all base RV32I instructions, including:
 
-- Arithmetic & logical operations  
-- Load/store  
-- Branch & jump  
-- Immediate + register variants  
-- System instructions (`ECALL`, `EBREAK`)
+Arithmetic & logical operations
 
-### ✔ CPU Execution Engine
-- Program counter management  
-- ALU operations  
-- Memory access  
-- Illegal-instruction handling  
-- Optional trace mode showing each executed instruction  
+Load/store
 
-### ✔ Memory System
-- Byte / halfword / word reads and writes  
-- Safe address access  
-- Memory dumping utilities  
+Branch & jump
 
-### ✔ Disassembler
-- Converts machine code into human-readable RV32I assembly  
-- Matches official RISC-V encoding formats  
+Immediate + register variants
 
-### ✔ Register File
-- 32 registers (x0–x31)  
-- x0 hardwired to zero  
-- Register state dump utilities  
+System instructions (ECALL, EBREAK)
 
----
+✔ CPU Execution Engine
 
-## 📁 Project Structure
+Program counter management
 
-cpu_single_hart.cpp / .h # CPU execution engine
-rv32i_decode.cpp / .h # Instruction decoder + disassembler
-rv32i_hart.cpp / .h # Instruction implementations
-memory.cpp / .h # Memory model
-registerfile.cpp / .h # Register file
-hex.cpp / .h # Hex loader
-main.cpp # Command-line interface
+ALU operations
 
-yaml
-Copy code
+Memory access
 
----
+Illegal-instruction handling
 
-## 🚀 Building the Simulator
+Optional trace mode showing each executed instruction
+
+✔ Memory System
+
+Byte / halfword / word reads and writes
+
+Safe address access
+
+Memory dumping utilities
+
+✔ Disassembler
+
+Converts machine code into human-readable RV32I assembly
+
+Matches official RISC-V encoding formats
+
+✔ Register File
+
+32 registers (x0–x31)
+
+x0 hardwired to zero
+
+Register state dump utilities
+
+📁 Project Structure
+cpu_single_hart.cpp / .h     # CPU execution engine
+rv32i_decode.cpp / .h        # Instruction decoder + disassembler
+rv32i_hart.cpp / .h          # Instruction implementations
+memory.cpp / .h              # Memory model
+registerfile.cpp / .h        # Register file
+hex.cpp / .h                 # Hex loader
+main.cpp                     # Command-line interface
+
+🚀 Building the Simulator
 
 Compile using g++:
 
-```bash
-g++ -std=c++17 -Wall -Wextra -o rv32i \
-    main.cpp cpu_single_hart.cpp rv32i_decode.cpp \
-    rv32i_hart.cpp memory.cpp registerfile.cpp hex.cpp
+g++ -std=c++17 -Wall -Wextra -o rv32i main.cpp cpu_single_hart.cpp rv32i_decode.cpp rv32i_hart.cpp memory.cpp registerfile.cpp hex.cpp
+
 Or using your Makefile:
 
-bash
-Copy code
 make
+
 ▶ Running the Simulator
+
 Run a hex program:
-
-bash
-Copy code
 ./rv32i prog.hex
+
 Enable tracing:
-
-bash
-Copy code
 ./rv32i -t prog.hex
-Dump registers at the end:
 
-bash
-Copy code
+Dump registers at the end:
 ./rv32i -l prog.hex
+
 🧪 Example Test Files
+
 Common test programs include:
 
 add.hex
@@ -100,12 +105,11 @@ branch.hex
 
 memtest.hex
 
-Example:
-
-bash
-Copy code
+Example usage:
 ./rv32i -t add.hex
+
 🎯 Purpose
+
 This project demonstrates:
 
 CPU architecture fundamentals
@@ -123,6 +127,7 @@ Systems programming in C++
 It serves as a foundation for understanding how real processors interpret and execute machine code.
 
 👤 Author
+
 Aasim Ghani
 Software Developer
-Systems Programming project in C++, related to the architecture branch of computer science
+Systems Programming • C++ • Computer Architecture
