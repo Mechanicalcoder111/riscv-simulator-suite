@@ -1,12 +1,7 @@
 /********************************************************************************************
 CSCI 463 – Final Exam Version 3 – RISC-V Simulator – Fall 2025
 
-
 Programmer:  Aasim Ghani
-Section:     2
-TA:          James Alexander Stephans
-Date Due:    10/30/2025
-
 
 Purpose:
     Declares the cpu_single_hart class, which represents a CPU containing a single
@@ -16,10 +11,6 @@ Purpose:
       - Honors an optional execution limit.
       - Reports the halt reason (if any) and the total number of instructions
         executed.
-
-
-I certify that this is my own work, and where applicable an extension of the
-starter code for the assignment/exam.
 ********************************************************************************************/
 
 
