@@ -1,114 +1,110 @@
 RISC-V Simulator Suite (RV32I)
 
-A complete RISC-V RV32I simulator written in modern C++, implementing:
+A complete RISC-V RV32I simulator written in modern C++. This project implements the core components of a real RISC-V processor, including:
 
 Memory module
 
 Register file
 
-Instruction decoder & disassembler
+Instruction decoder and disassembler
 
-Single-hart CPU emulator
+Single-hart CPU execution engine
 
-Instruction-accurate RV32I execution engine
+Instruction-accurate execution flow
 
-Tracing, debugging output, and program loaders
+Tracing, debugging, and program loading utilities
 
-This project replicates the core behavior of a real RISC-V processor, executing binary programs one instruction at a time while maintaining correct architectural state.
+The simulator executes binary programs one instruction at a time while maintaining correct architectural state.
 
-🔧 Features
-✔ RV32I Instruction Set Support
+Features
 
-Implements all base RV32I instructions, including:
+RV32I Instruction Set Support
+Implements all RV32I base instructions:
 
-Arithmetic & logical operations
+Arithmetic and logical
 
-Load/store
+Load and store
 
-Branch & jump
+Branch and jump
 
-Immediate + register variants
+Immediate and register variants
 
 System instructions (ECALL, EBREAK)
 
-✔ CPU Execution Engine
+CPU Execution Engine
 
-Program counter management
+Program counter updates
 
-ALU operations
+ALU processing
 
-Memory access
+Memory access logic
 
-Illegal-instruction handling
+Illegal instruction detection
 
-Optional trace mode showing each executed instruction
+Optional full instruction trace mode
 
-✔ Memory System
+Memory System
 
-Byte / halfword / word reads and writes
+Byte, halfword, and word access
 
-Safe address access
+Safe bounds checking
 
-Memory dumping utilities
+Memory inspection utilities
 
-✔ Disassembler
+Disassembler
 
-Converts machine code into human-readable RV32I assembly
+Converts machine code into readable RV32I assembly
 
-Matches official RISC-V encoding formats
-
-✔ Register File
+Register File
 
 32 registers (x0–x31)
 
-x0 hardwired to zero
+x0 permanently zero
 
-Register state dump utilities
+Register dump utilities
 
-📁 Project Structure
-cpu_single_hart.cpp / .h     # CPU execution engine
-rv32i_decode.cpp / .h        # Instruction decoder + disassembler
-rv32i_hart.cpp / .h          # Instruction implementations
-memory.cpp / .h              # Memory model
-registerfile.cpp / .h        # Register file
-hex.cpp / .h                 # Hex loader
-main.cpp                     # Command-line interface
+Project Structure
 
-🚀 Building the Simulator
+cpu_single_hart.cpp / .h - CPU execution engine
+rv32i_decode.cpp / .h - Instruction decoder and disassembler
+rv32i_hart.cpp / .h - Instruction implementations
+memory.cpp / .h - Memory model
+registerfile.cpp / .h - Register file
+hex.cpp / .h - Hex loader
+main.cpp - Command-line interface
 
-Compile using g++:
+Building
+
+Compile manually with g++:
 
 g++ -std=c++17 -Wall -Wextra -o rv32i main.cpp cpu_single_hart.cpp rv32i_decode.cpp rv32i_hart.cpp memory.cpp registerfile.cpp hex.cpp
 
-Or using your Makefile:
+Or build using a Makefile:
 
 make
 
-▶ Running the Simulator
+Running
 
-Run a hex program:
-./rv32i prog.hex
+Run a program:
+./rv32i program.hex
 
-Enable tracing:
-./rv32i -t prog.hex
+Enable instruction tracing:
+./rv32i -t program.hex
 
-Dump registers at the end:
-./rv32i -l prog.hex
+Dump registers after execution:
+./rv32i -l program.hex
 
-🧪 Example Test Files
+Example Test Files
 
 Common test programs include:
-
 add.hex
-
 branch.hex
-
 memtest.hex
 
-Example usage:
+Example:
 ./rv32i -t add.hex
 
-🎯 Purpose
+Purpose
 
 This project demonstrates:
 
@@ -116,17 +112,17 @@ CPU architecture fundamentals
 
 Instruction decoding
 
-State transitions in a CPU pipeline
+State transitions inside a CPU
 
-Memory/register interactions
+Memory and register interactions
 
 Binary program execution
 
 Systems programming in C++
 
-It serves as a foundation for understanding how real processors interpret and execute machine code.
+It provides a foundation for understanding how processors interpret and execute machine instructions.
 
-👤 Author
+Author
 
 Aasim Ghani
 Software Developer
