@@ -1,22 +1,13 @@
 /********************************************************************************************
-CSCI 463 – PE1 – RV32I Disassembler / Memory Simulator – Fall 2024
-
+RISC V Simulator
 
 Programmer:  Aasim Ghani
-Section:     2
-TA:          James Alexander Stephans
-Date Due:    10/30/2024
-
 
 Purpose:
     Implements the 'hex' utility class used to convert integer values into formatted
     hexadecimal strings. These helpers are used throughout the RV32I disassembler and
     memory simulator to render addresses, instruction words, and immediate fields in
     a consistent hex format (with or without a 0x prefix and fixed widths).
-
-
-I certify that this is my own work, and where applicable an extension of the
-starter code for the assignment/exam.
 ********************************************************************************************/
 
 
