@@ -81,12 +81,12 @@ Run a hex program:
 bash
 Copy code
 ./rv32i prog.hex
-Enable instruction tracing:
+Enable tracing:
 
 bash
 Copy code
 ./rv32i -t prog.hex
-Dump registers after execution:
+Dump registers at the end:
 
 bash
 Copy code
@@ -100,7 +100,7 @@ branch.hex
 
 memtest.hex
 
-Example usage:
+Example:
 
 bash
 Copy code
@@ -125,4 +125,4 @@ It serves as a foundation for understanding how real processors interpret and ex
 👤 Author
 Aasim Ghani
 Software Developer
-Systems Programming • C++ • Computer Architecture
+Systems Programming project in C++, related to the architecture branch of computer science
