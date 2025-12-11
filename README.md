@@ -1,129 +1,138 @@
-RISC-V Simulator Suite (RV32I)
+# RISC-V Simulator Suite (RV32I)
 
-A complete RISC-V RV32I simulator written in modern C++. This project implements the core components of a real RISC-V processor, including:
+A complete RISC-V RV32I simulator written in modern C++, implementing:
 
-Memory module
+- Memory module  
+- Register file  
+- Instruction decoder & disassembler  
+- Single-hart CPU emulator  
+- Instruction-accurate RV32I execution engine  
+- Tracing, debugging output, and program loaders
 
-Register file
+This project replicates the core behavior of a real RISC-V processor, executing binary programs one instruction at a time while maintaining correct architectural state.
 
-Instruction decoder and disassembler
+---
 
-Single-hart CPU execution engine
+## Features
 
-Instruction-accurate execution flow
+### RV32I Instruction Set Support
+Implements all base RV32I instructions:
 
-Tracing, debugging, and program loading utilities
+- Arithmetic & logical operations  
+- Load/store  
+- Branch & jump  
+- Immediate + register variants  
+- System instructions (`ECALL`, `EBREAK`)
 
-The simulator executes binary programs one instruction at a time while maintaining correct architectural state.
+### CPU Execution Engine
+- Program counter management  
+- ALU operations  
+- Memory access  
+- Illegal-instruction handling  
+- Optional trace mode showing each executed instruction  
 
-Features
+### Memory System
+- Byte / halfword / word reads and writes  
+- Safe address access  
+- Memory dumping utilities  
 
-RV32I Instruction Set Support
-Implements all RV32I base instructions:
+### Disassembler
+Converts machine code into human-readable RV32I assembly that matches standard encoding formats.
 
-Arithmetic and logical
+### Register File
+- 32 registers (x0–x31)  
+- x0 hardwired to zero  
+- Register state dump utilities  
 
-Load and store
+---
 
-Branch and jump
+## Project Structure
 
-Immediate and register variants
+```
+cpu_single_hart.cpp / .h   # CPU execution engine  
+rv32i_decode.cpp / .h      # Instruction decoder + disassembler  
+rv32i_hart.cpp / .h        # Instruction implementations  
+memory.cpp / .h            # Memory model  
+registerfile.cpp / .h      # Register file  
+hex.cpp / .h               # Hex loader  
+main.cpp                   # Command-line interface
+```
 
-System instructions (ECALL, EBREAK)
+---
 
-CPU Execution Engine
+## Building the Simulator
 
-Program counter updates
+Compile using g++:
 
-ALU processing
+```bash
+g++ -std=c++17 -Wall -Wextra -o rv32i \
+    main.cpp cpu_single_hart.cpp rv32i_decode.cpp \
+    rv32i_hart.cpp memory.cpp registerfile.cpp hex.cpp
+```
 
-Memory access logic
+Or using your Makefile:
 
-Illegal instruction detection
-
-Optional full instruction trace mode
-
-Memory System
-
-Byte, halfword, and word access
-
-Safe bounds checking
-
-Memory inspection utilities
-
-Disassembler
-
-Converts machine code into readable RV32I assembly
-
-Register File
-
-32 registers (x0–x31)
-
-x0 permanently zero
-
-Register dump utilities
-
-Project Structure
-
-cpu_single_hart.cpp / .h - CPU execution engine
-rv32i_decode.cpp / .h - Instruction decoder and disassembler
-rv32i_hart.cpp / .h - Instruction implementations
-memory.cpp / .h - Memory model
-registerfile.cpp / .h - Register file
-hex.cpp / .h - Hex loader
-main.cpp - Command-line interface
-
-Building
-
-Compile manually with g++:
-
-g++ -std=c++17 -Wall -Wextra -o rv32i main.cpp cpu_single_hart.cpp rv32i_decode.cpp rv32i_hart.cpp memory.cpp registerfile.cpp hex.cpp
-
-Or build using a Makefile:
-
+```bash
 make
+```
 
-Running
+---
 
-Run a program:
-./rv32i program.hex
+## Running the Simulator
 
-Enable instruction tracing:
-./rv32i -t program.hex
+Run a hex program:
 
-Dump registers after execution:
-./rv32i -l program.hex
+```bash
+./rv32i prog.hex
+```
 
-Example Test Files
+Enable tracing:
+
+```bash
+./rv32i -t prog.hex
+```
+
+Dump registers at the end:
+
+```bash
+./rv32i -l prog.hex
+```
+
+---
+
+## Example Test Files
 
 Common test programs include:
-add.hex
-branch.hex
-memtest.hex
 
-Example:
+- `add.hex`  
+- `branch.hex`  
+- `memtest.hex`
+
+Example usage:
+
+```bash
 ./rv32i -t add.hex
+```
 
-Purpose
+---
+
+## Purpose
 
 This project demonstrates:
 
-CPU architecture fundamentals
+- CPU architecture fundamentals  
+- Instruction decoding  
+- State transitions in a CPU pipeline  
+- Memory/register interactions  
+- Binary program execution  
+- Systems programming in C++
 
-Instruction decoding
+It serves as a foundation for understanding how real processors interpret and execute machine code.
 
-State transitions inside a CPU
+---
 
-Memory and register interactions
+## Author
 
-Binary program execution
-
-Systems programming in C++
-
-It provides a foundation for understanding how processors interpret and execute machine instructions.
-
-Author
-
-Aasim Ghani
-Software Developer
+**Aasim Ghani**  
+Software Developer  
 Systems Programming • C++ • Computer Architecture
