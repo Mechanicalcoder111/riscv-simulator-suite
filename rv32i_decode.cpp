@@ -1,12 +1,7 @@
 /********************************************************************************************
-CSCI 463 – PE1 – RV32I Disassembler / Memory Simulator – Fall 2024
-
+RISC-V Simulator
 
 Programmer:  Aasim Ghani
-Section:     2
-TA:          James Alexander Stephans
-Date Due:    10/30/2024
-
 
 Purpose:
     Implements the 'rv32i_decode' class, which provides a pure software decoder
@@ -21,10 +16,6 @@ Purpose:
 
     No printing is done directly in this file; instead, decode() returns a
     std::string that the caller (main/disassemble) prints.
-
-
-I certify that this is my own work, and where applicable an extension of the
-starter code for the assignment/exam.
 ********************************************************************************************/
 
 
