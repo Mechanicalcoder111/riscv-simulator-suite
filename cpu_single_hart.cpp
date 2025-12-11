@@ -1,12 +1,7 @@
 /********************************************************************************************
-CSCI 463 – Final Exam Version 3 – RISC-V Simulator – Fall 2025
-
+RISC-V Simulator
 
 Programmer:  Aasim Ghani
-Section:     2
-TA:          James Alexander Stephans
-Date Due:    10/30/2025
-
 
 Purpose:
     Implements the cpu_single_hart class run() method. This method:
@@ -17,10 +12,6 @@ Purpose:
           * until the hart is halted or the instruction-count limit is reached.
       - If the hart halts, prints the halt reason.
       - Always prints the total number of instructions executed.
-
-
-I certify that this is my own work, and where applicable an extension of the
-starter code for the assignment/exam.
 ********************************************************************************************/
 
 
