@@ -1,5 +1,5 @@
 /********************************************************************************************
-CSCI 463 – Final Exam Version 3 – RISC-V Simulator – Fall 2025
+RISC-V Simulator
 
 Programmer:  Aasim Ghani
 
